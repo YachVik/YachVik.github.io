@@ -1,0 +1,340 @@
+
+/*загрузка страницы*/
+.preloader {
+  /*фиксированное позиционирование*/
+  position: fixed;
+  /* координаты положения */
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /* фоновый цвет элемента */
+  background: #e0e0e0;
+  /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+  z-index: 1001;
+    animation: preloader_opacity 1s 1 linear forwards;
+  animation-delay: 1s;   
+}
+
+.preloader__row {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  animation: preloader-rotate 2s 2 linear;
+}
+
+.preloader__item {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  background-color: #337ab7;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  animation: preloader-bounce 2s 2 ease-in-out;
+}
+
+.preloader__item:last-child {
+  top: auto;
+  bottom: 0;
+  animation-delay: -1s;
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes preloader-bounce {
+
+  0%,
+  100% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+@keyframes preloader_opacity{
+   
+  100% {
+      
+      opacity: 0;
+      z-index: -1;
+      display: none;
+  }
+
+}
+
+/*
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
+}
+*/
+/*-------------*/
+
+/*Для хедера появление логотипа*/
+root {
+	--animation-delay: 0;
+	--duration: 800ms;
+	--iterations: 1;
+}
+
+body {
+/*	display: flex;*/
+/*
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-color: #72BDED;
+	flex-direction: column;
+*/
+}
+
+.reveal,
+.reveal::after {
+	        animation-delay: 0;
+	        animation-delay: var(--animation-delay, 2s);
+	        animation-iteration-count: 1;
+	        animation-iteration-count: var(--iterations, 1);
+	        animation-duration: 800ms;
+	        animation-duration: var(--duration, 800ms);
+	        animation-fill-mode: both;
+	        animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.reveal {
+	position: relative;
+/*	font-size: 6vw;*/
+	animation-name: text;
+	color: #FFF;
+	white-space: nowrap;
+	cursor: default;
+	text-transform: uppercase;
+	
+}
+
+.reveal::after{
+		content: "";
+		position: absolute;
+		z-index: 999;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		
+  
+		        transform: scaleX(0);
+		        transform-origin: 0 50%;
+		pointer-events: none;
+		        animation-name: revealer;
+	}
+
+
+@keyframes text {
+	from {
+		        clip-path: inset(0 100% 0 0);
+	}
+	to {
+		        clip-path: inset(0 0 0 0);
+	}
+}
+
+
+@keyframes revealer {
+	
+	0%, 50% {
+		        transform-origin: 0 50%;
+	}
+	
+	60%, 100% {
+		        transform-origin: 100% 50%;		
+	}
+
+	
+	60% {
+		        transform: scaleX(1);
+	}
+	
+	100% {
+		        transform: scaleX(0);
+	}
+}
+/*==================================*/
+
+/*появление пунктов меню*/
+
+.menu li{
+    opacity: 0;
+    animation: menutop 1.2s  ease forwards ;
+    -webkit-animation: menutop 1.2s  ease-out forwards ;
+    -o-animation: menutop 1.2s  ease-out forwards ;
+    animation-delay: 2.5s;
+    display: block;
+    
+
+}
+.menu li a{
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    transition-duration: 0.2s;
+}
+
+.menu li a:hover{
+    color:rgba(255, 119, 0, 1);
+    border-bottom: 5px solid #d17700;
+}
+
+.menu li a:active{
+    transform: scale(1.1);
+    transition-timing-function: ease;
+     border-bottom: 5px solid white;
+}
+
+@keyframes menutop {
+    0%{
+        opacity: 0;
+        margin-top:  -80px;
+    }
+    50%{
+         margin-top:  10px;
+    }
+    75%{
+           margin-top:  -4px;
+    }
+    100%{
+       opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+.menu li:nth-child(2){
+    animation-delay: 2.6s;
+}
+.menu li:nth-child(3){
+    animation-delay: 2.7s;
+}
+.menu li:nth-child(4){
+    animation-delay: 2.8s;
+}
+.menu li:nth-child(5){
+    animation-delay: 2.9s;
+}
+.menu li:nth-child(6){
+    animation-delay: 3s;
+}
+
+
+/*первая секция*/
+.title__container{
+    opacity: 0;
+     animation: vis_sect1 0.4s  ease forwards ;
+    -webkit-animation: vis_sect1 0.8s  ease forwards ;
+    -o-animation: vis_sect1 0.8s  ease forwards ;
+    animation-delay: 3s;
+    animation-duration: 1.2s;
+}
+
+section:not(:first-child),footer{
+    opacity: 0;
+    animation: vis_sect1 0.4s  ease forwards ;
+     animation-delay: 3s;
+    animation-duration: 2s;
+}
+
+.main2{
+   height: 100%;
+    width: 100%;
+/*    background: url("../img/bg.png") center/cover no-repeat;*/
+  animation: vis_sect1_bg 2s  ease forwards ;
+    -webkit-animation: vis_sect1_bg 2s  ease forwards ;
+    -o-animation: vis_sect1_bg 2s  ease forwards ;
+    animation-delay: 2s;
+    animation-duration: 3s;
+    background:url("../img/boy.png") 90% 100%/auto 80% no-repeat;
+    box-shadow: inset 1px -10px 15px 0 #dddfe2 ;
+    z-index: 0;
+    opacity: 0;
+}
+
+.main{
+     opacity: 1;
+   height: 100%;
+    width: 100%;
+}
+
+@keyframes vis_sect1 {
+    0%{
+        opacity: 0;
+        
+    }
+   
+    100%{
+       opacity: 1;
+      
+    }
+}
+
+@keyframes vis_sect1_bg {
+    0%{
+        opacity: 0;
+    }
+  
+   
+    100%{
+       opacity: 1;
+       
+        z-index: 0;
+    }
+}
+
+/*кнопки*/
+
+.button__main,.button__visit,.button__feedback{
+    transition-duration: 0.8s;
+}
+
+.button__main:hover{
+    background-color: rgba(52, 64, 81, 0.8);
+    color: white;
+}
+
+.button__main:active
+,.button__visit:active
+,.button__feedback:active
+{
+    transform: scale(1.1);
+    transition-timing-function: ease;
+}
+
+.button__visit:hover{
+    color: #63b5ae;
+    background: white;
+    border-color: #63b5ae;
+}
+
+.button__feedback:hover{
+    color: rgba(52, 64, 81, 1);
+    background: white;
+    border-color:  rgba(52, 64, 81, 1);
+}
+
+
+/*пролакс эффект*/
+.statistic{
+    background-attachment: fixed;
+}
