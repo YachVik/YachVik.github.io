@@ -7,38 +7,53 @@
     <meta name="robots" content="all">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
 
     
     <title>Ячейкина Виктория - веб-разработчик</title>
     
 </head>
 <body>
+  
+<!--  загрузка страницы-->
+  <div class="preloader">
+  <div class="preloader__row">
+    <div class="preloader__item"></div>
+    <div class="preloader__item"></div>
+  </div>
+</div>
+  
    <header>
        <nav>
-           <div class="logo">Андрей Браун</div>
+            <div class="logo reveal"><a href="#">Андрей Браун</a></div>
            <div class="menu">
                <ul>
-                   <li>Обо мне</li>
-                   <li>Услуги</li>
-                   <li>Кейсы</li>
-                   <li>Прайс</li>
-                   <li>Отзывы</li>
-                   <li>Контакты</li>
+                   <li><a href="#"> Обо мне </a></li>
+                   <li><a href="#">Услуги</a></li>
+                   <li><a href="#">Кейсы</a></li>
+                   <li><a href="#">Прайс</a></li>
+                   <li><a href="#">Отзывы</a></li>
+                   <li><a href="#">Контакты</a></li>
                </ul>
            </div>
        </nav>
    </header>
    
+   <main>
+   
 <!-- Первый раздел  -->
-   <div class="main">
+  <section class="main">
+   <div class="main2">
        <div class="title__container">
            <h1>Привет <br>Я Андрей Браун</h1>
            <h4>Фулл стек веб-разработчик</h4>
-           <input type="submit" value="Обо мне" class="button__main">
-           <input type="submit" value="Мои работы" class="button__main">
+           <input type="button" value="Обо мне" class="button__main">
+           <input type="button" value="Мои работы" class="button__main">
        </div>
    </div>
+</section>
 
+<section>
 <!-- Второй раздел: обо мне  -->
    <div class="about">
        <h2 class="title__part">Обо мне</h2>
@@ -49,8 +64,10 @@
            <input type="submit" value="Скачать резюме" class="button__main">
        </div>
    </div>
-   
+</section> 
+
 <!-- Третий раздел: что я умею  -->
+<section>
     <div class="skills">
         <h2 class="title__part">Что я умею</h2>
         <div class="title__line"></div>
@@ -77,8 +94,10 @@
             </div> 
         </div>
     </div>
-    
+</section>   
+
 <!--  Четвертый раздел  case-->
+<section>
     <div class="case">
       <h2 class="title__part">Кейсы</h2>
       <div class="title__line"></div>
@@ -100,22 +119,24 @@
           </div>
         </div>
     </div>
-    
+</section>
+  
 <!--  price  -->
+<section>
     <div class="price">
         <h2 class="title__part">Расчет стоимости</h2>
         <form class="form__price">
-            <h3>Тип сайта</h3>
+            <label for="form__price">Тип сайта</label>
             <select name="list_site" id="container__price_list" >
             <option disabled selected>Выберите пункт...</option>
             <option value="site1">Site1</option>
             </select>
-            <h3>Дизайн</h3>
+            <label for="form__price">Дизайн</label>
             <select name="list_site" id="container__price_list" >
                <option disabled selected>Выберите пункт...</option>
                 <option value="site1">Site1</option>
             </select>
-             <h3>Адаптивность</h3>
+            <label for="form__price">Адаптивность</label>
             <select name="list_site" id="container__price_list" >
                <option disabled selected>Выберите пункт...</option>
                 <option value="site1">Site1</option>
@@ -132,8 +153,9 @@
             </div>
         </form>
     </div>
-    
+ </section>   
 <!--  statistic -->
+<section>
     <div class="statistic">
        <h2 class="title__part">Немного статистики</h2>
        <div class="title__line"></div>
@@ -158,8 +180,10 @@
            <p>наград получено</p>
        </div>
     </div>
-    
+</section>   
+
 <!--  feedback -->
+<section>
     <div class="feedback">
        <h2 class="title__part">Отзывы</h2>
        <div class="title__line"></div>
@@ -170,7 +194,8 @@
        <input type="radio" id="radioButton2" name="face" value="2">
        <input type="radio" id="radioButton3" name="face" value="3">
     </div>
-    
+</section>
+
 <!-- footer contacts -->
     <footer class="contacts">
        <div class="container__contacts">
@@ -211,5 +236,6 @@
             <p>copyright@2022 Виктория Ячейкина Design by Web</p>
         </div>
     </footer>
+    </main>
 </body>
 </html>
