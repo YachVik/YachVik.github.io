@@ -15,11 +15,14 @@ nav{
      z-index: 100;
 }
 
+a,a:active{
+    text-decoration: none;
+}
 .logo{
     color: #fff;
     line-height: 60px;
     font-size: 20px;
-    margin-left: 390px;
+/*    margin-left: 390px;*/
     float: left;
 }
 .logo a{
@@ -28,7 +31,7 @@ nav{
 
 .menu{
     float: left;
-    padding-left: 430px;
+/*    padding-left: 430px;*/
 }
 
 .menu li{
@@ -56,13 +59,13 @@ nav{
 
 .title__container{
     float: left;
-    margin: 430px 0 0 410px;
+/*    margin: 23% 0 0 30%;*/
     text-align: center;
-    opacity: 0;
+    width: 100%;
 }
 
 .title__container h1{
-    font-size: 40px;
+    font-size: 70px;
     text-align: center;
     font-weight: bold;
     color: #2c384a; 
@@ -70,7 +73,7 @@ nav{
     
 }
 .title__container h4{
-    font-size: 18px;
+    font-size: 24px;
     color: #79818d;
     margin-top: 40px;
 }
@@ -104,7 +107,6 @@ nav{
     text-transform: uppercase;
     font-weight: bold;
     display: block;
-    
 }
 
 .title__line{
@@ -120,7 +122,7 @@ nav{
     align-content: center;
     margin:0 auto;
     padding: 65px 0 30px 0;
-    width: 735px;
+    width:100%;
 }
 
 .container__about img{
@@ -143,7 +145,7 @@ nav{
 /*skills*/
 
 .skills{
-    background: url(../img/bg2.png);
+    background: url(../img/bg2.png) center/cover no-repeat ;
     padding: 112px 0 95px 0;
 }
 
@@ -178,27 +180,42 @@ nav{
 .case{
     padding: 108px 0 205px 0;
     text-align: center;
+    width: 82%;
+    max-width: 1200px;
+    align-content: center;
+    margin: 0 auto;
 }
 
 .case .title__line{
     margin-bottom: 36px;
 }
 
+/*
 .slide__case{
     margin: 42px 0 47px 0;
+    background: url(../img/foto.png) center/cover no-repeat;
+    width: 100%;
+    height: 30%;
+    display: block;
+}
+*/
+
+.slide__case_img{
+    width: 100%;
+    margin-bottom: 50px;
 }
 
 .container_case_client{
     text-align: justify;
-    margin:0 82px 0 0;
-    width: 205px;
+/*    margin:0 82px 0 0;*/
+    width: 25%;
     float: left
 }
 
 .container_case_desc{
-    width: 770px;
     text-align: justify;
-    float: left
+    float: left;
+    width: 75%;
 }
 
 .container_case{
@@ -218,12 +235,15 @@ nav{
 }
 
 .button__visit{
-    width: 204px;
+    width: 70%;
+    max-width: 204px;
+    min-width: 150px;
     height: 44px;
     background: #63b5ae;
     color: #fff;
     border: 2px solid #63b5ae;
     border-radius: 5px;
+
 }
 
 .container_case_desc h4{
@@ -243,7 +263,7 @@ nav{
 
 .form__price{
     margin: 0 auto;
-    width: 890px;
+    width: 100;
 }
 
 .price .title__part{
@@ -260,7 +280,7 @@ nav{
 }
 
  .form__price select{
-    width: 890px;
+    width: 100%;
     height: 60px;
     margin-bottom: 48px;
     padding-left: 25px;
@@ -287,6 +307,10 @@ nav{
 .result__time, .result__cost{
       font-size: 20px;
 
+}
+
+.price .button__visit{
+    margin: 10% auto;
 }
 
 /*statistic*/
@@ -339,7 +363,7 @@ nav{
 }
 
 .feedback p{
-    width: 696px;
+    width: auto;
     margin: 30px auto;
 }
 
@@ -376,7 +400,7 @@ nav{
 }
 
 .container_in{
-    width: 776px;
+    width: auto;
     margin: 0 auto;
 }
 
@@ -405,7 +429,7 @@ nav{
 }
 
 .input_feedback{
-    width: 356px;
+    width: auto;
     height: 36px;
     margin: 46px 15px 15px 15px;
 }
@@ -446,6 +470,91 @@ nav{
 }
 
 
+
+
+@media (max-width:1199px){
+    .case{
+        font-size: 18px;
+    }
+}
+
+
+
+@media (max-width:991px){
+    .title__container h1, 
+    .title__container h4, 
+    .title__container .button__main{
+        color: white;
+        position: relative;
+        z-index: 3;
+    }
+    
+    .main2{
+        position: relative;
+    }
+    
+    .main2::after{
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0,0,0,0.4);
+    }
+    
+    .title__container .button__main{
+        border-color: #fff;
+    }
+    
+    .container__about{
+        font-size: 16px;
+    }
+    
+    .container__skills h5{
+       font-size: 19px;
+    }
+    
+    .container__skills{
+        font-size: 16px;
+    }
+    
+    .skills__item{
+        margin-bottom: 4%;
+    }
+    
+   
+}
+
+@media (max-width:767px){
+     .container_case {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .container_case>.container_case_client{
+        order: 2;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 5%;
+/*
+        width: 30%;
+        margin-right: 3%;
+*/
+    }
+    .container_case>.container_case_desc{
+/*         width: 68%;*/
+        order: 1;
+        width: 100%;
+    }
+    
+}
+@media (max-width:575px){
+    .container__about{
+        padding: 65px 15px 27px 10px;
+    }
+}
 
 
 

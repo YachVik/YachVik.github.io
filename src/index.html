@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Мое резюме">
     <meta name="author" content="Виктория">
     <meta name="robots" content="all">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animation.css">
 
-    
     <title>Ячейкина Виктория - веб-разработчик</title>
     
 </head>
@@ -23,47 +24,86 @@
   </div>
 </div>
   
-   <header>
-       <nav>
-            <div class="logo reveal"><a href="#">Андрей Браун</a></div>
-           <div class="menu">
-               <ul>
-                   <li><a href="#"> Обо мне </a></li>
+    <header>
+     <nav>
+       <div class="container">
+          <div class="row ">
+           <div class="col-xxl-2 col-lg-3 col-6">
+           <div class="logo reveal"><a href="#">Андрей Браун</a></div></div>
+            <div class="px-0 col-xxl-6 col-xl-7 col-lg-8 col-4  offset-xxl-4 offset-xl-2 offset-lg-1              d-none d-lg-block">
+               <div class="menu">
+                <ul>
+                   <li><a href="#">Обо мне</a></li>
                    <li><a href="#">Услуги</a></li>
                    <li><a href="#">Кейсы</a></li>
                    <li><a href="#">Прайс</a></li>
                    <li><a href="#">Отзывы</a></li>
                    <li><a href="#">Контакты</a></li>
-               </ul>
-           </div>
-       </nav>
+                </ul>
+               </div>
+            </div>
+          
+         <div class="col-6 d-flex d-lg-none flex-column justify-content-center align-items-end">
+            <!--   выпадающее меню-->
+           <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                Меню
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                <li><a class="dropdown-item active" href="#">Обо мне</a></li>
+                <li><a class="dropdown-item" href="#">Услуги</a></li>
+                <li><a class="dropdown-item" href="#">Кейсы</a></li>
+                <li><a class="dropdown-item" href="#">Прайс</a></li>
+                <li><a class="dropdown-item" href="#">Отзывы</a></li>
+                <li><a class="dropdown-item" href="#">Контакты</a></li>
+<!--                <li><hr class="dropdown-divider"></li>-->
+              </ul>
+            </div>
+            </div>
+            </div>
+       </div>
+     </nav>
    </header>
    
    <main>
    
 <!-- Первый раздел  -->
   <section class="main">
-   <div class="main2">
-       <div class="title__container">
-           <h1>Привет <br>Я Андрей Браун</h1>
-           <h4>Фулл стек веб-разработчик</h4>
-           <input type="button" value="Обо мне" class="button__main">
-           <input type="button" value="Мои работы" class="button__main">
-       </div>
-   </div>
+    <div class="main2">
+      <div class="container  h-100">
+          <div class="row  align-items-center h-100">
+              <div class=" col-xl-6 mt-5 pt-5 " >
+                       <div class="title__container mt-5">
+                           <h1>Привет <br>Я Андрей Браун</h1>
+                           <h4>Фулл стек веб-разработчик</h4>
+                           <input type="button" value="Обо мне" class="button__main">
+                           <input type="button" value="Мои работы" class="button__main">
+                       </div>
+                   </div>
+              </div>
+          </div>
+      </div>
 </section>
 
 <section>
 <!-- Второй раздел: обо мне  -->
-   <div class="about">
-       <h2 class="title__part">Обо мне</h2>
-       <div class="title__line"></div>
-       <div class="container__about">
-           <img src="img/preview.png" alt="я">
-           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus sunt repellendus labore eveniet temporibus tempora quos   perferendis repellat, voluptatibus suscipit veritatis! Ea ratione odio aperiam nulla voluptatem nam similique. Non!</p>            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus sunt repellendus labore eveniet temporibus tempora quos perferendis repellat, voluptatibus suscipit veritatis! Ea ratione odio aperiam nulla voluptatem nam similique. Non!</p>
-           <input type="submit" value="Скачать резюме" class="button__main">
-       </div>
-   </div>
+  <div class="container">
+      <div class="row">
+         <div class="col">
+          <div class="about">
+               <h2 class="title__part">Обо мне</h2>
+               <div class="title__line"></div>
+               <div class="container__about">
+                   <img src="img/preview.png" alt="я">
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus sunt repellendus labore eveniet temporibus tempora quos   perferendis repellat, voluptatibus suscipit veritatis! Ea ratione odio aperiam nulla voluptatem nam similique. Non!</p>            
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus sunt repellendus labore eveniet temporibus tempora quos perferendis repellat, voluptatibus suscipit veritatis! Ea ratione odio aperiam nulla voluptatem nam similique. Non!</p>
+                   <input type="submit" value="Скачать резюме" class="button__main">
+               </div>
+           </div>
+           </div>
+      </div>
+  </div>
+   
 </section> 
 
 <!-- Третий раздел: что я умею  -->
@@ -103,7 +143,7 @@
       <div class="title__line"></div>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias ipsum, aliquam cum?</p>
           <div class="slide__case">
-              <img src="img/foto.png" alt="фото">
+              <img src="img/foto.png" alt="фото" class="slide__case_img">
           </div>
        <div class="container_case">
           <div class="container_case_client">
@@ -123,36 +163,49 @@
   
 <!--  price  -->
 <section>
-    <div class="price">
-        <h2 class="title__part">Расчет стоимости</h2>
-        <form class="form__price">
-            <label for="form__price">Тип сайта</label>
-            <select name="list_site" id="container__price_list" >
-            <option disabled selected>Выберите пункт...</option>
-            <option value="site1">Site1</option>
-            </select>
-            <label for="form__price">Дизайн</label>
-            <select name="list_site" id="container__price_list" >
-               <option disabled selected>Выберите пункт...</option>
-                <option value="site1">Site1</option>
-            </select>
-            <label for="form__price">Адаптивность</label>
-            <select name="list_site" id="container__price_list" >
-               <option disabled selected>Выберите пункт...</option>
-                <option value="site1">Site1</option>
-            </select>
-            <div class="result times">
-                <span>Сроки</span> 
-                <div class="result__time" id="time">0</div> 
-            </div>
-              <div class="result">
-                 <span>Стоимость</span>
-<!--            </div>-->
-<!--            <div class="resultat">-->
-                <div class="result__cost" id="cost">0</div>
-            </div>
-        </form>
-    </div>
+   <div class="container">
+       <div class="row align-items-center">
+           <div class="offset-1 col-10 ">
+              <div class="price">
+                <h2 class="title__part">Расчет стоимости</h2>
+                <form class="form__price">
+                    <div class="row"><label for="form__price">Тип сайта</label></div>
+                    <div class="row"><select name="list_site" id="container__price_list" >
+                    <option disabled selected>Выберите пункт...</option>
+                    <option value="site1">Site1</option>
+                    </select></div>
+                    <div class="row"><label for="form__price">Дизайн</label></div>
+                    
+                    <div class="row"><select name="list_site" id="container__price_list" >
+                       <option disabled selected>Выберите пункт...</option>
+                        <option value="site1">Site1</option>
+                    </select>
+                    </div>
+                    
+                    <div class="row"> <label for="form__price">Адаптивность</label></div>
+                    <div class="row"><select name="list_site" id="container__price_list" >
+                       <option disabled selected>Выберите пункт...</option>
+                        <option value="site1">Site1</option>
+                    </select></div>
+                    <div class="result times">
+                        <span>Сроки</span> 
+                        <div class="result__time" id="time">0</div> 
+                    </div>
+                      <div class="result">
+                         <span>Стоимость</span>
+        <!--            </div>-->
+        <!--            <div class="resultat">-->
+                        <div class="result__cost" id="cost">0</div>
+                    </div>
+                    <div class="row">
+                        <input type="submit" value="Оставить заявку" class="button__visit">
+                    </div>
+                </form>
+              </div> 
+           </div>
+       </div>
+   </div>
+    
  </section>   
 <!--  statistic -->
 <section>
@@ -189,7 +242,8 @@
        <div class="title__line"></div>
        <img src="img/feedback_foto.png" alt="">
        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quasi praesentium perferendis doloremque voluptas quo voluptatem odit. Ratione excepturi sed nostrum quis, incidunt ea? Aspernatur aperiam temporibus dolore. Eum, possimus.</p>
-       <p><b>Михаил </b> бла бла</p>
+       <p>
+       <b>Михаил </b> бла бла</p>
        <input type="radio" id="radioButton1" name="face" value="1">
        <input type="radio" id="radioButton2" name="face" value="2">
        <input type="radio" id="radioButton3" name="face" value="3">
@@ -216,6 +270,7 @@
                     <p>+7999 999 99 99</p>
                 </div>
                 <div class="contacts_feedback">
+<!--
                    <form action="" method="get" class="form_feedback">
                         <h3>ОСТАВЬТЕ МНЕ СООБЩЕНИЕ</h3>
                         <input type="text" class="input_feedback name" name="name" placeholder="Имя">
@@ -223,6 +278,7 @@
                         <div><textarea type="textarea" class="textarea_feedback" name="text" placeholder="Сообщение" maxlength="100" ></textarea></div>
                         <input type="submit" value="Отправить" class="button__feedback">
                     </form>
+-->
                     <img src="img/fb.png" alt="иконки соц сетей">
                     <img src="img/tv.png" alt="иконки соц сетей">
                     <img src="img/ball.png" alt="иконки соц сетей">
@@ -237,5 +293,6 @@
         </div>
     </footer>
     </main>
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

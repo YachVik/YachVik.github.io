@@ -1,5 +1,6 @@
 
 /*загрузка страницы*/
+
 .preloader {
   /*фиксированное позиционирование*/
   position: fixed;
@@ -184,12 +185,14 @@ body {
     -o-animation: menutop 1.2s  ease-out forwards ;
     animation-delay: 2.5s;
     display: block;
+    
 
 }
 .menu li a{
     text-decoration: none;
     color: #fff;
     display: inline-block;
+    transition-duration: 0.2s;
 }
 
 .menu li a:hover{
@@ -220,6 +223,7 @@ body {
     }
 }
 
+/*
 .menu li:nth-child(2){
     animation-delay: 2.6s;
 }
@@ -235,31 +239,62 @@ body {
 .menu li:nth-child(6){
     animation-delay: 3s;
 }
+*/
+
+.menu li:nth-child(1){
+    animation-delay: 0s;
+}
+
+.menu li:nth-child(2){
+    animation-delay: 0.2s;
+}
+.menu li:nth-child(3){
+    animation-delay: 0.3s;
+}
+.menu li:nth-child(4){
+    animation-delay: 0.4s;
+}
+.menu li:nth-child(5){
+    animation-delay: 0.5s;
+}
+.menu li:nth-child(6){
+    animation-delay: 0.6s;
+}
+
 
 
 /*первая секция*/
 .title__container{
+/*
     opacity: 0;
      animation: vis_sect1 0.4s  ease forwards ;
     -webkit-animation: vis_sect1 0.8s  ease forwards ;
     -o-animation: vis_sect1 0.8s  ease forwards ;
     animation-delay: 3s;
+    animation-duration: 1.2s;
+*/
 }
 
 section:not(:first-child),footer{
     opacity: 0;
     animation: vis_sect1 0.4s  ease forwards ;
      animation-delay: 3s;
+    animation-duration: 2s;
 }
 
 .main2{
    height: 100%;
     width: 100%;
 /*    background: url("../img/bg.png") center/cover no-repeat;*/
-  animation: vis_sect1_bg 2s  ease-out forwards ;
-    -webkit-animation: vis_sect1_bg 2s  ease-out forwards ;
-    -o-animation: vis_sect1_bg 2s  ease-out forwards ;
-    animation-delay: 0.6s;
+  animation: vis_sect1_bg 2s  ease forwards ;
+    -webkit-animation: vis_sect1_bg 2s  ease forwards ;
+    -o-animation: vis_sect1_bg 2s  ease forwards ;
+    animation-delay: 2s;
+    animation-duration: 3s;
+    background:url("../img/boy.png") 90% 100%/auto 86% no-repeat;
+    box-shadow: inset 1px -10px 15px 0 #dddfe2 ;
+    z-index: 0;
+    opacity: 0;
 }
 
 .main{
@@ -281,30 +316,49 @@ section:not(:first-child),footer{
 }
 
 @keyframes vis_sect1_bg {
-    0%,70%{
+    0%{
         opacity: 0;
-        
     }
+  
    
     100%{
        opacity: 1;
-       background:url("../img/boy.png") 90% 100%/auto 80% no-repeat;
-        box-shadow: inset 1px -10px 15px 0 #dddfe2 ;
+       
         z-index: 0;
     }
 }
 
 /*кнопки*/
 
+.button__main,.button__visit,.button__feedback{
+    transition-duration: 0.8s;
+}
+
 .button__main:hover{
     background-color: rgba(52, 64, 81, 0.8);
     color: white;
 }
 
-.button__main:active{
+.button__main:active
+,.button__visit:active
+,.button__feedback:active
+{
     transform: scale(1.1);
     transition-timing-function: ease;
 }
+
+.button__visit:hover{
+    color: #63b5ae;
+    background: white;
+    border-color: #63b5ae;
+}
+
+.button__feedback:hover{
+    color: rgba(52, 64, 81, 1);
+    background: white;
+    border-color:  rgba(52, 64, 81, 1);
+}
+
 
 /*пролакс эффект*/
 .statistic{
