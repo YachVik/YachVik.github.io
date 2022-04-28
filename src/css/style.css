@@ -418,8 +418,14 @@ a,a:active{
     margin-bottom: 16px;
 }
 
+.contacts_feedback{
+    margin: 40px 0;
+}
 .form_feedback{
-    margin: 40px 0 80px 0;
+    max-width: 500px;
+margin: 0 auto;
+    justify-content: center;
+    text-align: center;
 }
 
 .form_feedback h3{
@@ -429,9 +435,10 @@ a,a:active{
 }
 
 .input_feedback{
-    width: auto;
+    width: calc(50% - 30px);
     height: 36px;
     margin: 46px 15px 15px 15px;
+    float: left;
 }
 
 .textarea_feedback{
@@ -445,7 +452,7 @@ a,a:active{
 }
 
 .button__feedback{
-    margin-top: 28px;
+    margin: 28px 0;
     width: 130px;
     height: 48px;
     background: none;
@@ -467,7 +474,9 @@ a,a:active{
 
 .contacts_feedback img{
     margin: 0 28px;
+
 }
+
 
 
 
